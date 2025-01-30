@@ -7,6 +7,7 @@ on:
 
 jobs:
     check-types:
+        name: Check typescript types
         runs-on: ubuntu-latest
 
         steps:
@@ -25,6 +26,7 @@ jobs:
               run: npm run check-types
 
     test:
+        name: Run tests
         runs-on: ubuntu-latest
 
         steps:
@@ -42,7 +44,8 @@ jobs:
             - name: Run tests
               run: npm test
 
-    build:
+    build-typescript:
+        name: Build typescript
         needs: [check-types, test]
         runs-on: ubuntu-latest
 
