@@ -1,6 +1,8 @@
 import dotenv from 'dotenv';
 
-const dotenvConfig = dotenv.config();
+const envFile = process.env.NODE_ENV === 'test' ? '.env.test' : '.env';
+
+const dotenvConfig = dotenv.config({ path: envFile });
 
 if (dotenvConfig.error) {
     throw new Error(dotenvConfig.error.message);
