@@ -4,4 +4,6 @@ This repository represents our journey into backend basics.
 
 We will have tasks and tests as well as bonuses. feel free to slack about issues/needs.
 
-[Task #1 - setup ssh](https://github.com/E1Duder1no/backend-101/blob/main/docs/setup-ssh.md)
+# Tasks
+
+1. [Task #1 - setup ssh](https://github.com/E1Duder1no/backend-101/blob/main/docs/setup-ssh.md)
