@@ -22,7 +22,7 @@ jobs:
               run: npm install
 
             - name: Check types
-              run: npm check-types
+              run: npm run check-types
 
     test:
         runs-on: ubuntu-latest
