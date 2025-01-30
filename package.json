@@ -10,7 +10,8 @@
   "scripts": {
     "test": "jest",
     "cleanup": "rm -rf dist",
-    "prebuild": "tsc --noEmit && npm run cleanup",
+    "check-types": "tsc --noEmit",
+    "prebuild": "npm run check-types && npm run cleanup",
     "build": "node esbuild.build.js",
     "dev": "ts-node src/server.ts",
     "prepreview": "npm run build",
