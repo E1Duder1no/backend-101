@@ -1,0 +1,7 @@
+{
+    "execMap": {
+        "ts": "ts-node --transpileOnly -r dotenv/config",
+        "watch": "./src",
+        "ext": ".ts"
+    }
+}

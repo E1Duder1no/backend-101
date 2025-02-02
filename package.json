@@ -2,8 +2,7 @@
   "name": "backend-101",
   "version": "1.0.0",
   "description": "This repository represents our journey into backend basics.",
-  "main": "index.js",
-  "type": "module",
+  "main": "./src/server.ts",
   "directories": {
     "doc": "docs"
   },
@@ -14,6 +13,7 @@
     "prebuild": "npm run check-types && npm run cleanup",
     "build": "node esbuild.build.js",
     "dev": "ts-node src/server.ts",
+    "dev:watch": "nodemon src/server.ts",
     "prepreview": "npm run build",
     "preview": "node ./dist/server.js"
   },

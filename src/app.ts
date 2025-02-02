@@ -13,13 +13,13 @@ const app = express();
 
 app.use(express.json(), express.urlencoded({ extended: true }), morgan('dev'), cors(), helmet());
 
-app.use('/health', middleware.healthCheck);
-
 app.use('/docs', middleware.docs);
 app.use('/docs.json', middleware.jsonDocs);
 app.use('/docs.yaml', middleware.yamlDocs);
 
 app.use(routesPrefix, mainRoutes);
+
+app.get('/health', middleware.healthCheck);
 
 app.use('*', middleware.catchAll);
 

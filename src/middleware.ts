@@ -4,6 +4,7 @@ import docsMiddleware from './swagger.middleware';
 import yaml from 'yaml';
 
 const healthCheck: RequestHandler = (_, res) => {
+    console.log(_.path, _.url, _.baseUrl, _.originalUrl);
     res.status(200).json({
         message: 'Ok',
     });
